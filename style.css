@@ -1,0 +1,100 @@
+*{
+    width: 980px;
+    margin: 0 auto;
+}
+
+body{
+    background-color: black;
+}
+
+h1{
+    color: white;
+}
+
+/* NAV */
+.nav{
+    border: 1px solid white;
+    height: 30px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(38, 36, 36);
+}
+
+.nav a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Carousel */
+.info{
+    border: 1px solid white;
+    width: 300px;
+    height: 200px;
+    margin-top: 60px;
+}
+
+h2, h3{
+    color: white;
+}
+
+
+/* About me */
+.carousel{
+    border: 1px solid white;
+    height: 100px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+}
+
+/* ::content */
+.carousel-content{
+    border: 1px solid white;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+    margin-right: 100px ;
+}
+
+.carouselImg{
+    display: flex;
+    width: 200px;
+    border: 1px solid white;
+}
+
+.carouselImg img{
+    width: 20px;
+	border-radius: 10px;
+	display: none;
+}
+
+
+p{
+    color: white;
+    text-align: center;
+}
+
+.container{
+    position: absolute;
+
+}
+
+.picture{
+    position: absolute;
+    top: 160px;
+    right: 640px;
+    width: 250px;
+    opacity: .8;
+}
+
+.picture img{
+    height: 320px;
+    width: 320px;
+}
