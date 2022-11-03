@@ -1,37 +1,113 @@
 *{
-    width: 980px;
-    margin: 0 auto;
+    margin: 0 auto;  
 }
 
 body{
+    min-width: 800px;
     background-color: black;
-}
-
-h1{
-    color: white;
+    margin: 0;
 }
 
 /* NAV */
-.nav{
-    border: 1px solid white;
-    height: 30px;
-    margin: 20px 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(38, 36, 36);
+.drop {
+height: 0;
+border: 80px solid rgba(0,0,0,0);
+border-top: 0 solid;
+border-bottom: 100px solid black;
+border-radius: 20px 20px 0 0;
+font: normal 20px/normal Arial, Helvetica, sans-serif;
+color: black;
+transform: rotateX(180deg);
+margin-top:-50px;
+width: 700px;
+position: relative;
+transition: all 0.7s ease;
+padding-left:7%;
 }
 
-.nav a{
-    text-align: center;
-    text-decoration: none;
-    color: white;
+.drop a, .subnavbtn {
+transform: rotateX(180deg);
+}
+
+
+.drop:hover{
+justify-content: center;
+margin-top: 50px;
+}
+
+.navbar {
+position: sticky;
+top: 0;
+display:flex;
+overflow:hidden;
+justify-content: center;
+height: 100px;
+}
+
+.navbar a {
+float: left;
+font-size: 16px;
+color: white;
+text-align: center;
+padding: 14px 30px;
+text-decoration: none;
+transition: all 0.5s ease;
+}
+
+.subnav{
+float: left;
+overflow: hidden;
+margin-left: 180px;
+}
+
+.subnav .subnavbtn {
+font-size: 25px; 
+border: none;
+outline: none;
+color: red;
+padding: 10px;
+background-color: inherit;
+font-family: cursive;
+margin: 0;
+letter-spacing: 4px;
+transition: all .5s ease;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+background:rgba(255, 0, 0, 0.592);
+color: black;
+border-radius:5px;
+}
+
+.subnav-content {
+display: none;
+position: absolute;
+right: 35px;
+width: 100%;
+z-index: 1;   
+transform: perspective(-10px);
+}
+
+.subnav-content a {
+float: left;
+color: white;
+text-decoration: none; 
+}
+
+.subnav-content a:hover {
+background:#218e5d;
+color: black;
+}
+
+.subnav:hover .subnav-content {
+display: flex;
+justify-content: center;
 }
 
 
 /* Carousel */
 .info{
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 300px;
     height: 200px;
     margin-top: 60px;
@@ -46,17 +122,17 @@ h3{
     color: white;
     height: 30px;
     width: 20px;
+    padding-left: 100px;
 }
 
 .container{
-    position: absolute;
-
+    width: 980px;
 }
 
 
 /* ::content */
 .carousel{
-    border: 1px solid white;
+    /* border: 1px solid white; */
     height: 100px;
     display:flex;
     flex-direction: row;
@@ -65,9 +141,9 @@ h3{
 }
 
 .carousel-content{
-    border: 1px solid white;
-    height: 200px;
-    width: 400px;
+    /* border: 1px solid white; */
+    height: 300px;
+    width: 500px;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -78,14 +154,15 @@ h3{
 
 .carouselImg{
     display: flex;
-    width: 400px;
-    height: 200px;
-    border: 1px solid white;
+    width: 380px;
+    height: 280px;
+    border: 20px solid rgba(42, 89, 57, 0.899);
+    border-style: ridge;
 }
 
 .carouselImg img{
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
 	border-radius: 10px;
 	display: none;
 }
@@ -99,42 +176,63 @@ p{
     text-align: center;
 }
 
-.btnN, .btnP{
+.btnN{
     width: 20px;
     height: 20px;
     align-self: center;
-	background: #f2cd99;
-	color: #888;
+	background: #727672;
 	padding: 10px;
-	border-radius: 50%;
-	text-align: center;
-	box-shadow: 1px 1px #fa8d8e;
+	border-radius: 40%;
+	box-shadow: 3px 3px #0d00fc;
 }
 
-.btnN:hover, .btnP:hover {
+.btnP{
+    width: 20px;
+    height: 20px;
+    align-self: center;
+	background: #727672;
+	padding: 10px;
+	border-radius: 40%;
+	box-shadow: -3px -3px #fc1d00;
+}
+
+.btnN:hover{
 	cursor: pointer;
-	background: #fa8d8e;
-	box-shadow: 1px 1px #f2cd99;
-	color: white;
+	background: #0d00fc;
+	box-shadow: 3px 3px #727672;
 }
 
-
+.btnP:hover{
+    cursor: pointer;
+	background: #fc1d00;
+	box-shadow: -3px -3px #727672;
+}
 
 
 /* user */
 .picture{
-    position: absolute;
-    top: 160px;
-    right: 640px;
-    width: 250px;
+    width: 980px;
     opacity: .8;
+    margin-top: -250px;   
 }
 
 .picture img{
-    height: 320px;
-    width: 320px;
+    height: 350px;
+    width: 350px;
 }
 
+h2{
+    color: #218e5d;
+    font-size: 30px;
+}
+
+h4{
+    color: antiquewhite;
+    font-size: 20px;
+}
+.info{
+    padding-left: 80px;
+}
 /* Modal */
 
 .modal {
@@ -187,3 +285,5 @@ p{
 	font-family: cursive;
 	cursor: pointer;
 }
+
+
