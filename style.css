@@ -37,12 +37,24 @@ h1{
     margin-top: 60px;
 }
 
-h2, h3{
+h2{
     color: white;
+    
+}
+
+h3{
+    color: white;
+    height: 30px;
+    width: 20px;
+}
+
+.container{
+    position: absolute;
+
 }
 
 
-/* About me */
+/* ::content */
 .carousel{
     border: 1px solid white;
     height: 100px;
@@ -52,40 +64,64 @@ h2, h3{
     
 }
 
-/* ::content */
 .carousel-content{
     border: 1px solid white;
     height: 200px;
-    width: 200px;
+    width: 400px;
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
+    align-content: center;
     margin: 50px;
     margin-right: 100px ;
 }
 
 .carouselImg{
     display: flex;
-    width: 200px;
+    width: 400px;
+    height: 200px;
     border: 1px solid white;
 }
 
 .carouselImg img{
-    width: 20px;
+    width: 200px;
+    height: 200px;
 	border-radius: 10px;
 	display: none;
 }
 
+.carouselImg img:first-of-type {
+    display: block;
+}  
 
 p{
     color: white;
     text-align: center;
 }
 
-.container{
-    position: absolute;
-
+.btnN, .btnP{
+    width: 20px;
+    height: 20px;
+    align-self: center;
+	background: #f2cd99;
+	color: #888;
+	padding: 10px;
+	border-radius: 50%;
+	text-align: center;
+	box-shadow: 1px 1px #fa8d8e;
 }
 
+.btnN:hover, .btnP:hover {
+	cursor: pointer;
+	background: #fa8d8e;
+	box-shadow: 1px 1px #f2cd99;
+	color: white;
+}
+
+
+
+
+/* user */
 .picture{
     position: absolute;
     top: 160px;
@@ -97,4 +133,57 @@ p{
 .picture img{
     height: 320px;
     width: 320px;
+}
+
+/* Modal */
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.591);
+	position: fixed;
+    z-index: 1;
+    overflow: auto;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	
+}
+
+.form-container{
+    background-color: rgba(33, 100, 176, 0.752);
+	height: 230px;
+	width: 300px;
+	margin: 150px auto ;
+	padding: 0;
+	line-height: 120%;
+    color: white;
+    text-align: left;
+    display: none;
+}
+
+.form-name, .email, .form-subject, .form-description{
+    width: 280px;
+}
+
+.form-description{
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.form{
+    height: 300px;
+    width: 300px;
+    padding: 5px;
+}
+
+.pop-button {
+	padding: 3px;
+    margin: 20px auto;
+	background-color: #13562c;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	font-family: cursive;
+	cursor: pointer;
 }
