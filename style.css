@@ -51,7 +51,7 @@ color: white;
 text-align: center;
 padding: 14px 30px;
 text-decoration: none;
-transition: all 0.5s ease;
+transition: all 0.7s ease;
 }
 
 .subnav{
@@ -70,7 +70,7 @@ background-color: inherit;
 font-family: cursive;
 margin: 0;
 letter-spacing: 4px;
-transition: all .5s ease;
+transition: all .7s ease;
 }
 
 .navbar a:hover, .subnav:hover .subnavbtn {
@@ -85,7 +85,6 @@ position: absolute;
 right: 35px;
 width: 100%;
 z-index: 1;   
-transform: perspective(-10px);
 }
 
 .subnav-content a {
@@ -142,8 +141,8 @@ h3{
 
 .carousel-content{
     /* border: 1px solid white; */
-    height: 300px;
-    width: 500px;
+    height: 320px;
+    width: 550px;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -154,15 +153,15 @@ h3{
 
 .carouselImg{
     display: flex;
-    width: 380px;
-    height: 280px;
+    width: 450px;
+    height: 380px;
     border: 20px solid rgba(42, 89, 57, 0.899);
     border-style: ridge;
 }
 
 .carouselImg img{
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 350px;
 	border-radius: 10px;
 	display: none;
 }
@@ -213,7 +212,7 @@ p{
 .picture{
     width: 980px;
     opacity: .8;
-    margin-top: -250px;   
+    margin-top: -270px;   
 }
 
 .picture img{
@@ -235,28 +234,27 @@ h4{
 }
 /* Modal */
 
+
 .modal {
     background-color: rgba(0, 0, 0, 0.591);
-	position: fixed;
+    position: fixed;
     z-index: 1;
     overflow: auto;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
-
 .form-container{
     background-color: rgba(33, 100, 176, 0.752);
-	height: 230px;
+	height: 250px;
 	width: 300px;
 	margin: 150px auto ;
 	padding: 0;
 	line-height: 120%;
     color: white;
     text-align: left;
-    display: none;
 }
 
 .form-name, .email, .form-subject, .form-description{
@@ -284,6 +282,9 @@ h4{
 	color: white;
 	font-family: cursive;
 	cursor: pointer;
-}
+} 
+
+
+
 
 

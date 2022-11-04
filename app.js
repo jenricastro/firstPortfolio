@@ -10,7 +10,9 @@ const nav = () =>{
                         $('<a>').attr('href', '#').text('GitHub').appendTo('.subInfo');
                         $('<a>').attr('href', '#').text('LinkedIn').appendTo('.subInfo');
                         $('<a>').attr('href', '#').text('Resume').appendTo('.subInfo');
-                        $('<a>').attr('href', '#').text('Contact').appendTo('.subInfo');
+                        $('<a>').attr({
+                            href: '#',
+                            id: 'openModal'}).text('Contact').appendTo('.subInfo');
 
     $('.subnavbtn').mouseover('hover',() =>{
         $('.sub-home').css({'display': 'none'}); 
@@ -36,48 +38,49 @@ const nav = () =>{
 const container = () => {
     $container = $('<div>').addClass('container').appendTo('body');
 
-        // //Modal
-        // $modalBtn = $('<button>').attr('id', 'openModal').text('Contact Me').appendTo('body');
-        //     $modal = $('<div>').addClass('modal').appendTo($modalBtn);
+        //Modal
+        $modal = $('<div>').addClass('modal').appendTo('body');
         // 
         //     // Contact Form
-        //     $formCont = $('<div>').addClass('form-container').appendTo($modal);
-        //     $form = $('<form>').attr({
-        //         action: "#",
-        //         class: 'form'
-        //     }).appendTo($formCont);
+            $formCont = $('<div>').addClass('form-container').appendTo('.modal');
+
         //         //info-Name
-        //         $formName = $('<label>').attr('for', 'form-name').text('Your name').appendTo($form);
-        //         $formNameInput = $('<input>').attr({
-        //             type: "text",
-        //             class: 'form-name',
-        //             name: "name",
-        //             placeholder: 'Your name ...',
-        //         }).appendTo($form);
-        //         //info-Email
-        //         $formEmail = $('<label>').attr('for', 'email').text('email').appendTo($form);
-        //         $formEmailInput = $('<input>').attr({
-        //             type: 'email',
-        //             class: 'email',
-        //             name: 'email',
-        //             placeholder: 'Add your email ...',
-        //         }).appendTo($form);
-        //         //info Subject
-        //         $formSubject = $('<label>').attr('for', 'form-subject').text('Subject').appendTo($form);
-        //         $formSubInput = $('<input>').attr({
-        //             type: 'text',
-        //             class: 'form-subject',
-        //             name: 'subject',
-        //             placeholder: 'Whaaaa... ??',
-        //         }).appendTo($form);
-        //         //RUN API??????????????
-        //         $formDes = $('<label>').attr('for', 'form-description').text('Description').appendTo($form);
-        //         $formDesInput = $('<input>').attr({
-        //             type: 'text',
-        //             class: 'form-description',
-        //             name: 'description',
-        //         }).appendTo($form);
-        //     $closeBtn = $('<botton>').addClass('pop-button').text('submit').appendTo($form);
+                $form = $('<form>').attr({
+                            action: "#",
+                            class: 'form'
+                        }).appendTo('.form-container');
+                $formName = $('<label>').attr('for', 'form-name').text('Your name').appendTo('.form');
+                $formNameInput = $('<input>').attr({
+                    type: "text",
+                    class: 'form-name',
+                    name: "name",
+                    placeholder: 'Your name ...',
+                }).appendTo('.form');
+                //info-Email
+                $formEmail = $('<label>').attr('for', 'email').text('email').appendTo('.form');
+                $formEmailInput = $('<input>').attr({
+                    type: 'email',
+                    class: 'email',
+                    name: 'email',
+                    placeholder: 'Add your email ...',
+                }).appendTo('.form');
+                //info Subject
+                $formSubject = $('<label>').attr('for', 'form-subject').text('Subject').appendTo('.form');
+                $formSubInput = $('<input>').attr({
+                    type: 'text',
+                    class: 'form-subject',
+                    name: 'subject',
+                    placeholder: 'Whaaaa... ??',
+                }).appendTo('.form');
+                //RUN API??????????????
+                $formDes = $('<label>').attr('for', 'form-description').text('Description').appendTo('.form');
+                $formDesInput = $('<input>').attr({
+                    type: 'text',
+                    class: 'form-description',
+                    name: 'description',
+                }).appendTo('.form');
+        $closeBtn = $('<botton>').addClass('pop-button').text('submit').appendTo('.form');
+
 
 
 
@@ -109,7 +112,26 @@ const container = () => {
         $('<img>').attr('src', '../firstPortfolio/images/20221101_195131.jpg').appendTo($picture)
 }
 
-//
+//MODAL
+
+const modal = () =>{
+
+    const $openModal = $('#openModal');
+    const $modal = $('.modal');
+    const $closeModal = $('.pop-button');
+
+    const openModal = () => {
+        $modal.css('display', 'block');
+    }
+
+    const closeModal = () => {
+        $modal.css('display', 'none');
+    }
+
+    $openModal.on('click', openModal);
+
+    $closeModal.on('click', closeModal);
+}
 
 //Carousel w Projects
 
@@ -138,31 +160,18 @@ const projects = () =>{
         })
 }
 
-// const modal = () =>{
-// 
-//     const $openModal = $('#openModal');
-//     const $formCont = $('.form-container');
-//     const $closeBtn = $('.pop-button');
-//         
-//     
-// 
-//     const openModal = () => {
-//         $formCont.css('display', 'block');
-//     }
-//     
-// 
-//     const closeModal = () =>{
-//         $formCont.css('display', 'none')
-//     }
-// 
-//     $openModal.on('click', openModal);
-//     $closeBtn.on('click', closeModal)
-// }
+
+
+
+
 
 // HTML/MAP
 $(()=>{
     nav()
     container()
     projects()
-    // modal()
+    modal()
+
+    
+
 })
