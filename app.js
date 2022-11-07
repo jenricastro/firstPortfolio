@@ -7,9 +7,11 @@ const nav = () =>{
                 $navBtn = $('<button>').addClass('subnavbtn').text('Hello World').appendTo('.subnav');
                 $navCont= $('<div>').addClass('subnav-content').appendTo('.subnav');
                     $navInfo = $('<div>').addClass('subInfo').appendTo('.subnav-content');
-                        $('<a>').attr('href', '#').text('GitHub').appendTo('.subInfo');
-                        $('<a>').attr('href', '#').text('LinkedIn').appendTo('.subInfo');
-                        $('<a>').attr('href', '#').text('Resume').appendTo('.subInfo');
+                        $('<a>').attr('href', 'https://github.com/jenricastro').text('GitHub').appendTo('.subInfo');
+                        $('<a>').attr('href', 'https://www.linkedin.com/in/jenricastro?original_referer=https%3A%2F%2Fwww.google.com%2F').text('LinkedIn').appendTo('.subInfo');
+                        $('<a>').attr({
+                            href: '#',
+                            id: 'resumeModal'}).text('Resume').appendTo('.subInfo');
                         $('<a>').attr({
                             href: '#',
                             id: 'openModal'}).text('Contact').appendTo('.subInfo');
@@ -38,13 +40,11 @@ const nav = () =>{
 const container = () => {
     $container = $('<div>').addClass('container').appendTo('body');
 
-        //Modal
+        //Modal (contact form)
         $modal = $('<div>').addClass('modal').appendTo('body');
-        // 
-        //     // Contact Form
+        // Contact Form
             $formCont = $('<div>').addClass('form-container').appendTo('.modal');
-
-        //         //info-Name
+        //info-Name
                 $form = $('<form>').attr({
                             action: "#",
                             class: 'form'
@@ -57,7 +57,7 @@ const container = () => {
                     placeholder: 'Your name ...',
                 }).appendTo('.form');
                 //info-Email
-                $formEmail = $('<label>').attr('for', 'email').text('email').appendTo('.form');
+                $formEmail = $('<label>').attr('for', 'email').text('Email').appendTo('.form');
                 $formEmailInput = $('<input>').attr({
                     type: 'email',
                     class: 'email',
@@ -72,7 +72,6 @@ const container = () => {
                     name: 'subject',
                     placeholder: 'Whaaaa... ??',
                 }).appendTo('.form');
-                //RUN API??????????????
                 $formDes = $('<label>').attr('for', 'form-description').text('Description').appendTo('.form');
                 $formDesInput = $('<input>').attr({
                     type: 'text',
@@ -82,7 +81,14 @@ const container = () => {
         $closeBtn = $('<botton>').addClass('pop-button').text('submit').appendTo('.form');
 
 
+        //Modal (Resume)
+            $('<div>').addClass('modalResume').appendTo('body');
+                $('<div>').addClass('resume').appendTo('.modalResume');
+                    $('<img>').attr('src', '/images/Jaime_Castro_Resume-1.png').appendTo('.resume');
+                    $('<img>').attr('src', '/images/Jaime_Castro_Resume-2.png').appendTo('.resume');
+                    $('<button>').addClass('closeRes').text('X').appendTo('.modalResume');
 
+                
 
         //My Info
         $info = $('<div>').addClass('info').appendTo($container);
@@ -99,20 +105,56 @@ const container = () => {
             
             $btnP = $('<div>').addClass('btnP').appendTo($carouselCont);//The picture continer is cobering half the button..
                 $carouselImg = $('<div>').addClass('carouselImg').appendTo($carouselCont)
-                    $('<img>').attr('src', '../firstPortfolio/images/yellowbelttest.png').appendTo($carouselImg);
-                    $('<img>').attr('src', '../firstPortfolio/images/profilepagecss.png').appendTo($carouselImg);
-                    $('<img>').attr('src', '../firstPortfolio/images/Full CRUD.png').appendTo($carouselImg);
-                    $('<img>').attr('src', '../firstPortfolio/images/Full CRUD1.png').appendTo($carouselImg);
-                    $('<img>').attr('src', '../firstPortfolio/images/Full CRUD2.png').appendTo($carouselImg);
-                    $('<img>').attr('src', '../firstPortfolio/images/ApiCRUD.png').appendTo($carouselImg);
+                    $('<img>').attr('src', '/images/yellowbelttest.png').appendTo($carouselImg);
+                    $('<img>').attr('src', '/images/profilepagecss.png').appendTo($carouselImg);
+                    $('<img>').attr('src', '/images/Full CRUD.png').appendTo($carouselImg);
+                    $('<img>').attr('src', '/images/Full CRUD1.png').appendTo($carouselImg);
+                    $('<img>').attr('src', '/images/Full CRUD2.png').appendTo($carouselImg);
+                    $('<img>').attr('src', '/images/ApiCRUD.png').appendTo($carouselImg);
             $btnN = $('<div>').addClass('btnN').appendTo($carouselCont);//The picture continer is cobering half the button..
 
         //User Pic
         $picture = $('<div>').addClass('picture').appendTo('body');
-        $('<img>').attr('src', '../firstPortfolio/images/20221101_195131.jpg').appendTo($picture)
-}
+        $('<img>').attr('src', '/images/20221101_195131.jpg').appendTo($picture)
+        
+        //Media Header
+        $mediaContainer = $('<div>').addClass('media').appendTo('body');
+            $topContainer = $('<div>').addClass('topContainer').appendTo('.media');
+            $('<img>').attr({
+                src: '/images/20221101_195131.png',
+                class: 'mediaImg'    
+            }).appendTo('.topContainer');
+                $('<div>').addClass('mediaHeader').appendTo('.topContainer');
+                    $('<h1>').addClass('mediaH1').text('Jaime Castro').appendTo('.mediaHeader');
+                    $('<h3>').addClass('mediaH3').text('Junior Web Developer & Software Engineer').appendTo('.mediaHeader');
+                    
+        // //Media Body
+            $accordionContainer = $('<div>').addClass('accordion').appendTo('body');
+                //Section 1
+                $('<h1>').attr('id', 'section1').text('Section1').appendTo('.accordion');
+                $('<div>').attr({
+                    id: 'accordioncontent_1',
+                    class: 'accordion-content'
+                }).text('section1').appendTo('.accordion');
+                //Section 2
+                $('<h1>').attr('id', 'section2').text('Section2').appendTo('.accordion');
+                $('<div>').attr({
+                    id: 'accordioncontent_2',
+                    class: 'accordion-content'
+                }).text('section1').appendTo('.accordion');
+                //Section 3
+                $('<h1>').attr('id', 'section3').text('Section3').appendTo('.accordion');
+                $('<div>').attr({
+                    id: 'accordioncontent_3',
+                    class: 'accordion-content'
+                }).text('section1').appendTo('.accordion');
+                
+        //Footer
 
-//MODAL
+
+}   
+
+//MODALS
 
 const modal = () =>{
 
@@ -131,6 +173,27 @@ const modal = () =>{
     $openModal.on('click', openModal);
 
     $closeModal.on('click', closeModal);
+}
+
+const ResumeModal =()=>{
+
+const $openModal = $('#resumeModal');
+    const $modal = $('.modalResume');
+    const $closeModal = $('.closeRes');
+
+    const openModal = () => {
+        $modal.css('display', 'block');
+    }
+
+    const closeModal = () => {
+        $modal.css('display', 'none');
+    }
+
+    $openModal.on('click', openModal);
+
+    $closeModal.on('click', closeModal);
+
+
 }
 
 //Carousel w Projects
@@ -160,18 +223,35 @@ const projects = () =>{
         })
 }
 
+//Media Body
+
+const media = () =>{
+    $accordionContainer.ready(function(){
+        $(".accordion h1").on('click',function(){
+            let id = this.id;   /* getting heading id */
+        
+            /* looping through all elements which have class .accordion-content */
+            $(".accordion-content").each(function(){
+        
+                if($("#"+id).next()[0].id != this.id){
+                    $(this).slideUp();
+                }
+        
+            });
+        
+            $(this).next().toggle();  /* Selecting div after h1 */
+        });
+        });
+
+}
 
 
-
-
-
-// HTML/MAP
+// DOM-- HTML
 $(()=>{
-    nav()
-    container()
-    projects()
-    modal()
-
-    
-
+    nav();
+    container();
+    projects();
+    modal();
+    ResumeModal();
+    media()
 })
