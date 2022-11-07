@@ -343,7 +343,7 @@ h4{
         padding: 20px;
         text-align: left;
         cursor: pointer;
-        
+        margin-bottom: 50px;
     }
 
     .mediaImg{
@@ -380,15 +380,13 @@ h4{
     }
     
     .accordion h1{
-    font-size:26px;
-    font-weight: normal;
+    font-size: 30px;
     text-align: center;
-    margin-bottom:0px;
-    margin-top:0px;
-    background-color:gainsboro;
-    padding-top:7px;padding-bottom:7px;
-    border:1px solid darkgrey;
-    border-radius:3px;
+    margin-bottom: 0;
+    background-color:rgb(219, 219, 219);
+    padding-top:10px;
+    padding-bottom:10px;
+    border: 1px solid black;
     }
 
     .accordion h1:hover{
@@ -399,8 +397,7 @@ h4{
         display:none;
         padding:10px;
         height:100px;
-        line-height:20px;
-        border:1px solid gray;
+        border:1px solid black;
         border-radius:3px;
     }
     
