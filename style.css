@@ -8,7 +8,7 @@ background-color: black;
 margin: 0;
 }
 
-/* NAV */
+/* NAV-----------------------------------------------------------------  */
 .drop {
 height: 0;
 border: 80px solid rgba(0,0,0,0);
@@ -104,7 +104,7 @@ justify-content: center;
 }
 
 
-/* Carousel */
+/* Carousel ----------------------------------------------------------------- */
 .info{
 /* border: 1px solid white; */
 width: 300px;
@@ -129,7 +129,7 @@ width: 980px;
 }
 
 
-/* ::content */
+/* ::content ----------------------------------------------------------------- */
 .carousel{
 /* border: 1px solid white; */
 height: 100px;
@@ -313,7 +313,7 @@ font-size: 20px;
 .info{
 padding-left: 80px;
 }
-/* Modal */
+/* Modal--------------------------------------------------------------------- */
 
 .modal{
 background-color: rgba(0, 0, 0, 0.591);
@@ -364,7 +364,7 @@ font-family: cursive;
 cursor: pointer;
 } 
 
-/* Resume Modal */
+/* Resume Modal ----------------------------------------------------------------*/
 
 .modalResume {
 display: none;
@@ -410,12 +410,19 @@ cursor: pointer;
 width: 1px;
 height: 1px;
 }
-.mediaH3{
-font-size: 1px;
-}
+
 footer a{
 color: black;
 }
+
+.accordion .accordion-content{
+    font-size: 1px;
+}
+
+.mediaH1, .mediaH3{
+    font-size: 1px;
+}
+/* MEDIA------------------------------------------------------------------------- */
 
 @media (min-width: 0) and (max-width: 410px) {
 
