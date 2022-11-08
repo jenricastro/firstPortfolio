@@ -138,7 +138,7 @@ const container = () => {
                 $('<h1>').attr('id', 'section1').text('About Me').appendTo('.accordion');
                 $('<div>').attr({
                     id: 'accordioncontent_1',
-                    class: 'accordion-content'
+                    class: 'accordion-content',
                 }).text('Learn and discover. Seeking an opportunity to exceed and develop my skills within a challenging organization.').appendTo('.accordion');
                 //Section 2
                 $('<h1>').attr('id', 'section2').text('Education').appendTo('.accordion');
