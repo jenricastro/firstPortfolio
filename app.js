@@ -103,7 +103,7 @@ const container = () => {
         $('<h3>').text("").appendTo($carousel);
         $carouselCont = $('<div>').addClass('carousel-content').appendTo($carousel);
             
-            $btnP = $('<div>').addClass('btnP').appendTo($carouselCont);//The picture continer is cobering half the button..
+            $btnP = $('<div>').text('←').addClass('btnP').appendTo($carouselCont);//The picture continer is cobering half the button..
                 $carouselImg = $('<div>').addClass('carouselImg').appendTo($carouselCont)
                     $('<img>').attr('src', '/images/yellowbelttest.png').appendTo($carouselImg);
                     $('<img>').attr('src', '/images/profilepagecss.png').appendTo($carouselImg);
@@ -111,17 +111,17 @@ const container = () => {
                     $('<img>').attr('src', '/images/Full CRUD1.png').appendTo($carouselImg);
                     $('<img>').attr('src', '/images/Full CRUD2.png').appendTo($carouselImg);
                     $('<img>').attr('src', '/images/ApiCRUD.png').appendTo($carouselImg);
-            $btnN = $('<div>').addClass('btnN').appendTo($carouselCont);//The picture continer is cobering half the button..
+            $btnN = $('<div>').text('→').addClass('btnN').appendTo($carouselCont);//The picture continer is cobering half the button..
 
         //User Pic
         $picture = $('<div>').addClass('picture').appendTo('body');
-        $('<img>').attr('src', '/images/20221101_195131.jpg').appendTo($picture)
+        $('<img>').attr('src', 'images/20221101_195131.jpg').appendTo($picture)
         
         //Media Header
         $mediaContainer = $('<div>').addClass('media').appendTo('body');
             $topContainer = $('<div>').addClass('topContainer').appendTo('.media');
             $('<img>').attr({
-                src: '/images/20221101_195131.png',
+                src: 'images/20221101_195131.jpg',
                 class: 'mediaImg'    
             }).appendTo('.topContainer');
                 $('<div>').addClass('mediaHeader').appendTo('.topContainer');
@@ -147,11 +147,12 @@ const container = () => {
                 $('<div>').attr({
                     id: 'accordioncontent_3',
                     class: 'accordion-content'
-                }).text('section1').appendTo('.accordion');
-                
+                }).text('section1').appendTo('.accordion'); 
         //Footer
-
-
+            $footer = $('<footer>').addClass('footer').appendTo('body');
+                $('<img>').attr('src', 'images/resume_transo.png').appendTo('.footer');
+                $('<img>').attr('src', 'images/linkedIn.png').appendTo('.footer');
+                $('<img>').attr('src', 'images/github-logo.png').appendTo('.footer');
 }   
 
 //MODALS
