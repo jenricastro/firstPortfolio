@@ -257,7 +257,6 @@ const media = () =>{
                 if($("#"+id).next()[0].id != this.id){
                     $(this).slideUp();
                 }
-        
             });
         
             $(this).next().toggle();  /* Selecting div after h1 */
