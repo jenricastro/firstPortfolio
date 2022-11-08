@@ -84,8 +84,8 @@ const container = () => {
         //Modal (Resume)
             $('<div>').addClass('modalResume').appendTo('body');
                 $('<div>').addClass('resume').appendTo('.modalResume');
-                    $('<img>').attr('src', '/images/Jaime_Castro_Resume-1.png').appendTo('.resume');
-                    $('<img>').attr('src', '/images/Jaime_Castro_Resume-2.png').appendTo('.resume');
+                    $('<img>').attr('src', './images/Jaime_Castro_Resume-1.png').appendTo('.resume');
+                    $('<img>').attr('src', './images/Jaime_Castro_Resume-2.png').appendTo('.resume');
                     $('<button>').addClass('closeRes').text('X').appendTo('.modalResume');
 
                 
@@ -105,23 +105,23 @@ const container = () => {
             
             $btnP = $('<div>').text('←').addClass('btnP').appendTo($carouselCont);//The picture continer is cobering half the button..
                 $carouselImg = $('<div>').addClass('carouselImg').appendTo($carouselCont)
-                    $('<img>').attr('src', '/images/yellowbelttest.png').appendTo($carouselImg);
-                    $('<img>').attr('src', '/images/profilepagecss.png').appendTo($carouselImg);
-                    $('<img>').attr('src', '/images/Full CRUD.png').appendTo($carouselImg);
-                    $('<img>').attr('src', '/images/Full CRUD1.png').appendTo($carouselImg);
-                    $('<img>').attr('src', '/images/Full CRUD2.png').appendTo($carouselImg);
-                    $('<img>').attr('src', '/images/ApiCRUD.png').appendTo($carouselImg);
+                    $('<img>').attr('src', './images/yellowbelttest.png').appendTo($carouselImg);
+                    $('<img>').attr('src', './images/profilepagecss.png').appendTo($carouselImg);
+                    $('<img>').attr('src', './images/Full CRUD.png').appendTo($carouselImg);
+                    $('<img>').attr('src', './images/Full CRUD1.png').appendTo($carouselImg);
+                    $('<img>').attr('src', './images/Full CRUD2.png').appendTo($carouselImg);
+                    $('<img>').attr('src', './images/ApiCRUD.png').appendTo($carouselImg);
             $btnN = $('<div>').text('→').addClass('btnN').appendTo($carouselCont);//The picture continer is cobering half the button..
 
         //User Pic
         $picture = $('<div>').addClass('picture').appendTo('body');
-        $('<img>').attr('src', 'images/20221101_195131.jpg').appendTo($picture)
+        $('<img>').attr('src', './images/20221101_195131.jpg').appendTo($picture)
         
         //Media Header
         $mediaContainer = $('<div>').addClass('media').appendTo('body');
             $topContainer = $('<div>').addClass('topContainer').appendTo('.media');
             $('<img>').attr({
-                src: 'images/20221101_195131.jpg',
+                src: './images/20221101_195131.jpg',
                 class: 'mediaImg'    
             }).appendTo('.topContainer');
                 $('<div>').addClass('mediaHeader').appendTo('.topContainer');
@@ -150,9 +150,9 @@ const container = () => {
                 }).text('section1').appendTo('.accordion'); 
         //Footer
             $footer = $('<footer>').addClass('footer').appendTo('body');
-                $('<img>').attr('src', 'images/resume_transo.png').appendTo('.footer');
-                $('<img>').attr('src', 'images/linkedIn.png').appendTo('.footer');
-                $('<img>').attr('src', 'images/github-logo.png').appendTo('.footer');
+                $('<img>').attr('src', './images/resume_transo.png').appendTo('.footer');
+                $('<img>').attr('src', './images/linkedIn.png').appendTo('.footer');
+                $('<img>').attr('src', './images/github-logo.png').appendTo('.footer');
 }   
 
 //MODALS
