@@ -131,28 +131,44 @@ const container = () => {
         // //Media Body
             $accordionContainer = $('<div>').addClass('accordion').appendTo('body');
                 //Section 1
-                $('<h1>').attr('id', 'section1').text('Section1').appendTo('.accordion');
+                $('<h1>').attr('id', 'section1').text('About Me').appendTo('.accordion');
                 $('<div>').attr({
                     id: 'accordioncontent_1',
                     class: 'accordion-content'
                 }).text('section1').appendTo('.accordion');
                 //Section 2
-                $('<h1>').attr('id', 'section2').text('Section2').appendTo('.accordion');
+                $('<h1>').attr('id', 'section2').text('Education').appendTo('.accordion');
                 $('<div>').attr({
                     id: 'accordioncontent_2',
                     class: 'accordion-content'
                 }).text('section1').appendTo('.accordion');
                 //Section 3
-                $('<h1>').attr('id', 'section3').text('Section3').appendTo('.accordion');
+                $('<h1>').attr('id', 'section3').text('Goals').appendTo('.accordion');
                 $('<div>').attr({
                     id: 'accordioncontent_3',
                     class: 'accordion-content'
                 }).text('section1').appendTo('.accordion'); 
+                //Section 4
+                $('<h1>').attr('id', 'section3').text('Projects').appendTo('.accordion');
+                $('<div>').attr({
+                    id: 'accordioncontent_3',
+                    class: 'accordion-content'
+                }).text('section1').appendTo('.accordion');
         //Footer
             $footer = $('<footer>').addClass('footer').appendTo('body');
-                $('<img>').attr('src', './images/resume_transo.png').appendTo('.footer');
-                $('<img>').attr('src', './images/linkedIn.png').appendTo('.footer');
-                $('<img>').attr('src', './images/github-logo.png').appendTo('.footer');
+            $('<a>').attr({
+                href: 'https://github.com/jenricastro',
+                class: 'fa fa-github'
+            }).appendTo('.footer')
+            $('<a>').attr({
+                href: 'https://www.linkedin.com/in/jenricastro?original_referer=https%3A%2F%2Fwww.google.com%2F',
+                class: 'fa fa-linkedin-square',
+                style: 'width: 100px; height: 100px'
+            }).appendTo('.footer')
+            $('<a>').attr({
+                href: '#',
+                class: 'fa fa-file-text',
+            }).appendTo('.footer')
 }   
 
 //MODALS

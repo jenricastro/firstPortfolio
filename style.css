@@ -336,9 +336,8 @@ h4{
 .mediaH3{
     font-size: 1px;
 }
-footer img{
-    width: 1px;
-    height: 1px;
+footer a{
+    color: black;
 }
 
 @media (min-width: 0) and (max-width: 410px) {
@@ -346,6 +345,7 @@ footer img{
     body {
     background-color: rgba(30, 34, 66, 0.896);
     overflow: auto;
+
     }
     
 
@@ -422,10 +422,15 @@ footer img{
     
     /* Footer */
 
-    footer img{
-        background-color: transparent;
-        width: 100px;
-        height: 100px;
+    footer{
+        width:100%;
+        margin:0;
+        display: flex;
     }
 
+    .fa{
+        font-size: 100px;
+        margin-top: 50px;
+        color: #fc1d00;
+    }
 }
