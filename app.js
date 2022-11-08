@@ -96,22 +96,26 @@ const container = () => {
         
         $('<h2>').text('Hi, my name is  Jaime').appendTo($infoText)
             $('<h4>').text('Junior Web Developer and Software Engineer').appendTo($infoText)
-            $('<p>').text('')
+            $('<h6>').text('Knowledge is the basis of something... and I will find that something').appendTo($infoText)
         
         //Carousel
         $carousel = $('<div>').addClass('carousel').appendTo($container);
-        $('<h3>').text("").appendTo($carousel);
+        $('<a>').attr({
+            class: 'projBtn',
+            type: 'button',
+            href: '../../firstPortfolio/projects.html'
+        }).text("My Projects").appendTo($carousel);
         $carouselCont = $('<div>').addClass('carousel-content').appendTo($carousel);
             
-            $btnP = $('<div>').text('←').addClass('btnP').appendTo($carouselCont);//The picture continer is cobering half the button..
-                $carouselImg = $('<div>').addClass('carouselImg').appendTo($carouselCont)
-                    $('<img>').attr('src', './images/yellowbelttest.png').appendTo($carouselImg);
-                    $('<img>').attr('src', './images/profilepagecss.png').appendTo($carouselImg);
-                    $('<img>').attr('src', './images/Full CRUD.png').appendTo($carouselImg);
-                    $('<img>').attr('src', './images/Full CRUD1.png').appendTo($carouselImg);
-                    $('<img>').attr('src', './images/Full CRUD2.png').appendTo($carouselImg);
-                    $('<img>').attr('src', './images/ApiCRUD.png').appendTo($carouselImg);
-            $btnN = $('<div>').text('→').addClass('btnN').appendTo($carouselCont);//The picture continer is cobering half the button..
+            $btnP = $('<div>').text(' ← ').addClass('btnP').appendTo($carouselCont);//The picture continer is cobering half the button..
+                $carouselImg = $('<div>').addClass('carouselImg').appendTo($carouselCont);
+                    $('<img>').attr('src', './images/yellowbelttest.png').appendTo('.carouselImg');
+                    $('<img>').attr('src', './images/profilepagecss.png').appendTo('.carouselImg');
+                    $('<img>').attr('src', './images/Full CRUD.png').appendTo('.carouselImg');
+                    $('<img>').attr('src', './images/Full CRUD1.png').appendTo('.carouselImg');
+                    $('<img>').attr('src', './images/Full CRUD2.png').appendTo('.carouselImg');
+                    $('<img>').attr('src', './images/ApiCRUD.png').appendTo('.carouselImg');
+            $btnN = $('<div>').text(' → ').addClass('btnN').appendTo($carouselCont);//The picture continer is cobering half the button..
 
         //User Pic
         $picture = $('<div>').addClass('picture').appendTo('body');
@@ -135,25 +139,26 @@ const container = () => {
                 $('<div>').attr({
                     id: 'accordioncontent_1',
                     class: 'accordion-content'
-                }).text('section1').appendTo('.accordion');
+                }).text('Learn and discover. Seeking an opportunity to exceed and develop my skills within a challenging organization.').appendTo('.accordion');
                 //Section 2
                 $('<h1>').attr('id', 'section2').text('Education').appendTo('.accordion');
                 $('<div>').attr({
                     id: 'accordioncontent_2',
                     class: 'accordion-content'
-                }).text('section1').appendTo('.accordion');
+                }).text('GENERAL ASSEMBLY - Software Engineering').appendTo('.accordion');
                 //Section 3
                 $('<h1>').attr('id', 'section3').text('Goals').appendTo('.accordion');
                 $('<div>').attr({
                     id: 'accordioncontent_3',
                     class: 'accordion-content'
-                }).text('section1').appendTo('.accordion'); 
+                }).text(
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ').appendTo('.accordion'); 
                 //Section 4
-                $('<h1>').attr('id', 'section3').text('Projects').appendTo('.accordion');
+                $('<h1>').attr('id', 'section4').text('Projects').appendTo('.accordion');
                 $('<div>').attr({
-                    id: 'accordioncontent_3',
+                    id: 'accordioncontent_4',
                     class: 'accordion-content'
-                }).text('section1').appendTo('.accordion');
+                }).text('Project will go here, not added because I want to use JQuery and not use the HTML section').appendTo('.accordion');
         //Footer
             $footer = $('<footer>').addClass('footer').appendTo('body');
             $('<a>').attr({
@@ -163,11 +168,10 @@ const container = () => {
             $('<a>').attr({
                 href: 'https://www.linkedin.com/in/jenricastro?original_referer=https%3A%2F%2Fwww.google.com%2F',
                 class: 'fa fa-linkedin-square',
-                style: 'width: 100px; height: 100px'
             }).appendTo('.footer')
             $('<a>').attr({
                 href: '#',
-                class: 'fa fa-file-text',
+                class: 'fa fa-file-text'
             }).appendTo('.footer')
 }   
 
